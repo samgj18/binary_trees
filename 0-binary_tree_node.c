@@ -3,7 +3,7 @@
  *
  *       Filename:  0-binary_tree_node.c
  *
- *    Description:
+ *    Description:  Function that creates a binary tree node
  *
  *        Version:  1.0
  *        Created:  19/07/2020 18:46:20
