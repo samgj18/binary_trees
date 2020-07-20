@@ -22,7 +22,8 @@
  * @value: value of the node
  * Return: Null on failure or ptr to new node
  */
-binary_tree_t *binary_tree_node(binary_tree_t *parent, int value){
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
+{
 	binary_tree_t *new_node;
 
 	new_node = malloc(sizeof(binary_tree_t));
@@ -33,6 +34,6 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value){
 	new_node->right = NULL;
 	new_node->n = value;
 
-	return new_node;
+	return (new_node);
 }
 
