@@ -1,5 +1,5 @@
 /*
- * =====================================================================================
+ * ===========================================================
  *
  *       Filename:  3-binary_tree_delete.c
  *
@@ -13,20 +13,20 @@
  *         Author:  Juliana Chois - Samuel Gómez
  *   Organization:  Holberton
  *
- * =====================================================================================
+ * ===========================================================
  */
 
 #include "binary_trees.h"
 /**
- * binary_tree_delete - delete a tree
- * @tree: input root
+ * post_order_traversal - delete a tree
+ * @root: input root
  */
 void post_order_traversal(binary_tree_t *root)
 {
 	if (!root)
 		return;
 
-	if(root)
+	if (root)
 	{
 		post_order_traversal(root->left);
 		post_order_traversal(root->right);
@@ -34,7 +34,10 @@ void post_order_traversal(binary_tree_t *root)
 	}
 	free(root);
 }
-
+/**
+ * binary_tree_delete - delete a tree
+ * @tree: input root
+ */
 void binary_tree_delete(binary_tree_t *tree)
 {
 	post_order_traversal(tree);
