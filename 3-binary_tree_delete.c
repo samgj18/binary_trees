@@ -30,6 +30,7 @@ void post_order_traversal(binary_tree_t *root)
 	{
 		post_order_traversal(root->left);
 		post_order_traversal(root->right);
+		printf("%d\n", root->n);
 	}
 	free(root);
 }

@@ -1,9 +1,9 @@
 /*
  * =====================================================================================
  *
- *       Filename:  4-binary_tree_is_leaf.c
+ *       Filename:  5-binary_tree_is_root.c
  *
- *    Description:  Function that checks if a node is a leaf
+ *    Description:  Function that checks if a given node is a root
  *
  *        Version:  1.0
  *        Created:  20/07/2020 11:38:36
@@ -16,17 +16,15 @@
  * =====================================================================================
  */
 #include "binary_trees.h"
-
 /**
- * binary_tree_is_leaf - checks if node is leaf
+ * binary_tree_is_root - checks if node is root
  * @node: input node
- * Return: 1 for leaf or 0
- *
+ * Return: returns 1 for root or 0
  */
-int binary_tree_is_leaf(const binary_tree_t *node)
+int binary_tree_is_root(const binary_tree_t *node)
 {
 
-	if (node && !(node->left) && !(node->right))
+	if (node && !(node->parent))
 		return (1);
 
 	return (0);
