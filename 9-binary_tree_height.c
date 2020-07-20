@@ -32,8 +32,10 @@ size_t post_order_traversal(const binary_tree_t *root,
 
 	if (root)
 	{
-		c_left  = post_order_traversal(root->left, c_left, c_right) + 1;
-		c_right = post_order_traversal(root->right, c_left, c_right) + 1;
+		c_left  = post_order_traversal(root->left, c_left, c_right);
+		c_left++;
+		c_right = post_order_traversal(root->right, c_left, c_right);
+		c_right++;
 	}
 	if (c_right > c_left)
 		return (c_right);
