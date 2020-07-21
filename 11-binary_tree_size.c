@@ -20,5 +20,5 @@ size_t binary_tree_size(const binary_tree_t *tree)
 		return (n_left + 1 + n_right);
 	}
 
-	return(0);
+	return (0);
 }
