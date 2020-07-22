@@ -10,6 +10,6 @@
 # Ignore all main.c files
 *-main.c
 
-# Ignore _putchar.c file
-_putchar.c
+# Ignore print files file
+binary_tree_print.c
 
