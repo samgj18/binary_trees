@@ -71,6 +71,11 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	return (counter - 1);
 }
 
+/**
+ * binary_tree_size - checks the size
+ * @tree: input tree
+ * Return: size
+ */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
 	int n_left = 0;
