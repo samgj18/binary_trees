@@ -1,5 +1,10 @@
 #include "binary_trees.h"
 
+/**
+ * binary_tree_is_perfect - checks if the tree iis perfect
+ * @tree: input tree
+ * Return: 0
+ */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t height = binary_tree_height(tree);
@@ -22,6 +27,13 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 }
 
+/**
+ * post_order_traversal - checks for the height of a node
+ * @root: input root
+ * @c_left: counter left
+ * @c_right: counter right
+ * Return: height
+ */
 size_t post_order_traversal(const binary_tree_t *root,
 			    size_t c_left, size_t c_right)
 {
