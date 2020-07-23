@@ -1,10 +1,24 @@
 #include "binary_trees.h"
 
+/**
+ * max_val -  calculates the maximum value
+ * @a: first value
+ * @b: second value
+ *
+ * Return: the maximun value
+ */
 int max_val(int a, int b)
 {
     return (a >= b) ? a : b; 
 }
 
+/**
+ * height_tree -  calculates the highest value
+ * of the tree
+ * @node: pointer
+ *
+ * Return: the highest node
+ */
 int height_tree(const binary_tree_t *node)
 {
     if (node == NULL)
