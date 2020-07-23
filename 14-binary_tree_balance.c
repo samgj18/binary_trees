@@ -1,30 +1,24 @@
 #include "binary_trees.h"
 
 /**
- * max_val -  calculates the maximum value
- * @a: first value
- * @b: second value
- *
- * Return: the maximun value
- */
-int max_val(int a, int b)
-{
-    return (a >= b) ? a : b;
-}
-
-/**
- * height_tree -  calculates the highest value
- * of the tree
- * @node: pointer
+ * binary_tree_height - calculates the highest value
+ * @tree: pointer
  *
  * Return: the highest node
  */
-int height_tree(const binary_tree_t *node)
+int binary_tree_height(const binary_tree_t *tree)
 {
-    if (node == NULL)
-        return 0;
+	size_t right_c = 0, left_c = 0;
 
-    return (1 + max_val(height_tree(node->left), height_tree(node->right)));
+	if (tree == NULL || (tree->left == NULL && tree->right == NULL))
+		return (0);
+
+	left_c = binary_tree_height(tree->left) + 1;
+	right_c = binary_tree_height(tree->right) + 1;
+
+	if (right_c > left_c)
+		return (right_c);
+	return (left_c);
 }
 
 /**
@@ -36,8 +30,14 @@ int height_tree(const binary_tree_t *node)
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	if (tree == NULL)
-		return (0);
+	int left_c = 0, right_c = 0;
 
-	return (height_tree(tree->right) - height_tree(tree->left));
+		if (tree == NULL)
+			return (0);
+		if (tree->left)
+			left_c = binary_tree_height(tree->left) + 1;
+		if (tree->right)
+			right_c = binary_tree_height(tree->right) + 1;
+
+		return (left_c - right_c);
 }
