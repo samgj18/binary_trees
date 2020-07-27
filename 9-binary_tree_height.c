@@ -48,7 +48,7 @@ size_t post_order_traversal(const binary_tree_t *root,
  * @tree: input tree
  * Return: height
  */
-size_t binary_tree_height(const binary_tree_t *tree)
+int binary_tree_height(const binary_tree_t *tree)
 {
 	size_t counter = 0, c_left = 0, c_right = 0;
 
