@@ -35,7 +35,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  * Return: height
  */
 size_t post_order_traversal(const binary_tree_t *root,
-			    size_t c_left, size_t c_right)
+		size_t c_left, size_t c_right)
 {
 	if (!root)
 		return (0);
@@ -59,7 +59,7 @@ size_t post_order_traversal(const binary_tree_t *root,
  * @tree: input tree
  * Return: height
  */
-size_t binary_tree_height(const binary_tree_t *tree)
+int binary_tree_height(const binary_tree_t *tree)
 {
 	size_t counter = 0, c_left = 0, c_right = 0;
 
